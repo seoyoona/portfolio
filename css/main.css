@@ -27,7 +27,7 @@ main .about_me .intro_title::before{content: '"'; display: block; position: abso
 main .about_me .intro_title::after{content: '"'; display: block; position: absolute; top: 0; right: 20%; color: var(--primary);}
 
 main .about_me .profile{position: absolute; top: 50%; left: 50%; transform: translateX(-50%); margin-top: 10rem; width: 35%; height: 80rem; border: 7px solid #d9d9d9; justify-content: center; align-items: center; border-radius: 45%; }
-main .about_me .profile_img{width: 90%; height: 93%; background: #d9d9d9; transform: translate(2.5rem, 2.5rem); border-radius: 45%; background :  url('../img/profile_img\ 복사본.JPEG') no-repeat center top / cover;}
+main .about_me .profile_img{width: 90%; height: 93%; background: #d9d9d9; transform: translate(2.5rem, 2.5rem); border-radius: 45%; background :  url('../img/profile_img.JPEG') no-repeat center top / cover;}
 
 main .about_me .intro_info{width: 100%; height: 100%; display: flex; justify-content: space-between; align-content: center; font-size: 1.4rem;}
 main .about_me .info_col_right, .info_col_left{flex-direction:column; width: 50%;}
