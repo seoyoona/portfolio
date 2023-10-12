@@ -59,9 +59,14 @@ main .experience .ex_wrap ul h3 {font-size: 1.6rem; margin-bottom: 5rem;}
 main .experience .ex_wrap ul li {font-size: 2rem; text-align: left; margin-bottom: 3rem;}
 main .experience .ex_wrap ul .edu_cap {font-size: 1.2rem;}
 
-main .project .project_wrap{display: flex; justify-content: space-between; align-items: center;}
-main .project .project_wrap>img {width: 50%; }
+main .project .project_wrap{display: flex; justify-content: space-between; align-items: center; position: relative; }
+main .project .project_wrap>img {width: 50%;}
 main .project .project_wrap .project_title{font-size: 3rem; font-weight: 700;}
+main .project .project_wrap .project_title_cap{font-size: 2rem; font-weight: 600;}
+main .project .project_wrap .window_wrapL{position: absolute; top: 10%; left: 3%; width: 44%; height: 80%; overflow: scroll; }
+main .project .project_wrap .window_wrapR{position: absolute; top: 10%; right: 3%; width: 44%; height: 80%; overflow: scroll;}
+main .project .project_wrap .window_wrapR img{width: 100%;}
+main .project .project_wrap .window_wrapL img{width: 100%;}
 
 
 /* footer */
