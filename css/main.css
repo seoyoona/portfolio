@@ -59,6 +59,9 @@ main .experience .ex_wrap ul h3 {font-size: 1.6rem; margin-bottom: 5rem;}
 main .experience .ex_wrap ul li {font-size: 2rem; text-align: left; margin-bottom: 3rem;}
 main .experience .ex_wrap ul .edu_cap {font-size: 1.2rem;}
 
+main .project .project_wrap{display: flex; justify-content: space-between; align-items: center;}
 main .project .project_wrap>img {width: 50%; }
+main .project .project_wrap .project_title{font-size: 3rem; font-weight: 700;}
+
 
 /* footer */
