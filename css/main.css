@@ -48,7 +48,7 @@ main .advantage .skill_box { display: flex; flex-direction: column; text-align: 
 main .advantage .skill_bar { display: flex; } 
 main .advantage .language { display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: auto; } 
 main .advantage .lang_text { width: 20rem; height: 10rem; line-height: 10rem; font-size: 1.8rem; } 
-main .advantage .lang_bar { width: 80rem; height: 10rem; background: #d9d9d9; } 
+main .advantage .lang_bar { width: 80rem; height: 10rem;line-height: 5rem;} 
 main .advantage .programming .adv_box img { height: 40%; margin-top: 30%; } 
 main .advantage .tools .adv_box img { height: 30%; margin-top: 40%; } 
 main .advantage .percent { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Amiri', serif; } 
