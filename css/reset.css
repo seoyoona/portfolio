@@ -38,6 +38,8 @@ ul { list-style: none; }
 a { text-decoration: none; color: #000; } 
 :root{--primary:#5689C5; --txt: #000; --background:#fff; }
 
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
 @font-face {
     font-family: 'SCoreDream';
     font-weight: 100; 
