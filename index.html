@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -191,8 +188,12 @@
                                 <div class="barWrapper">
                                     <span class="progressText"><B>ENGLISH</B></span>
                                     <div class="progress">
-                                      <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" >   
-                                            <span  class="popOver" data-toggle="tooltip" data-placement="top" title="98%"> </span>     
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" >   
+                                            <div class="tooltip fade top in" role="tooltip" id="tooltip670507" style="top: -40px; left: 28.7969px; display: block;">
+                                                <div class="tooltip-arrow" style="left: 50%; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f;"></div>
+                                                <div class="tooltip-inner">98%</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -201,10 +202,14 @@
                             <div class="lang_text">French</div>
                             <div class="lang_bar">
                                 <div class="barWrapper">
-                                    <span class="progressText"><B>ENGLISH</B></span>
+                                    <span class="progressText"><B>French</B></span>
                                     <div class="progress">
-                                      <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" >   
-                                            <span  class="popOver" data-toggle="tooltip" data-placement="top" title="95%"> </span>     
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" >   
+                                            <div class="tooltip fade top in" role="tooltip" id="tooltip670507" style="top: -40px; left: 28.7969px; display: block;">
+                                                <div class="tooltip-arrow" style="left: 50%; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f;"></div>
+                                                <div class="tooltip-inner">95%</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -309,21 +314,71 @@
             <section class="photos">
                 <div class="container">
                     <h1>Art Works</h1>
+                    <div class="tab_wrap">
+                        <ul class="tab_btn">
+                            <li><a href="#tabs-1" class="active">Work 1</a></li>
+                            <li><a href="#tabs-2">Work 2</a></li>
+                            <li><a href="#tabs-3">Work 3</a></li>
+                        </ul>
+                        <div class="tab_content">
+                            <div id="tabs-1" class="active">
+                                <div class="photo_wrap">
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                </div>
+                            </div>
+                            <div id="tabs-2">
+                                <div class="photo_wrap">
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                </div>
+                            </div>
+                            <div id="tabs-3">
+                                <div class="photo_wrap">
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                    <div class="tab_photo"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <hr>
         </main>
         <footer>
-            <div class="copyright"></div>
-            <div class="profile_link"></div>
-            <div class="sns_link">
-                <ul>
-                    <li><a href="https://www.instagram.com/hi_yoonac/"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=100007588295040"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                </ul>
+            <div class="container">
+                <div class="footer_wrap">
+                    <div class="copyright">
+                        <p>&copy; 2023 . All Rights Reserved.</p>
+                    </div>
+                    <div class="profile_link">
+                        <a href="https://seoyoona.github.io/portfolio/">SEOYOONA.GITHUB.IO</a>
+                    </div>
+                    <div class="sns_link">
+                        <ul>
+                            <li><a href="https://www.instagram.com/hi_yoonac/"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100007588295040"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-</footer>
+        </footer>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
 </html>
