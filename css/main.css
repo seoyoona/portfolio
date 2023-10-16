@@ -83,7 +83,7 @@ main .experience .ex_wrap ul li { font-size: 2rem; text-align: left; margin-bott
 main .experience .ex_wrap ul .edu_cap { font-size: 1.2rem; } 
 
 main .project .project_wrap { display: flex; justify-content: space-between; align-items: center; position: relative; margin: 20rem 0; } 
-main .project .project_wrap>img { width: 50%; opacity: 80%; } 
+main .project .project_wrap>img { width: 50%; opacity: 100%; } 
 main .project .project_wrap .project_title { font-size: 3rem; font-weight: 700; } 
 main .project .project_wrap .project_title_cap { font-size: 2rem; font-weight: 600; } 
 main .project .project_wrap .project_description { font-size: 1.8rem; font-weight: 400; line-height: 200%; margin-top: 3rem; } 
@@ -101,7 +101,7 @@ main .photos {height: 110rem;}
 .tab_btn {display: flex; justify-content: space-evenly; margin-bottom: 10rem;}
 .tab_btn li {background: #ebebeb; border-radius: 3rem;}
 .tab_btn li a { color: #999; text-transform: uppercase; text-decoration: none; font-size: 1.8rem; width: 30rem; height: 5rem; line-height: 5rem;display: block; text-align: center;}
-.tab_btn li a.active {background: #000;color: #fff; border-radius: 3rem;}
+.tab_btn li a.active {background: #444;color: #fff; border-radius: 3rem;}
 .tab_content {position: relative;min-height: 300px;}
 .tab_content > div { position: absolute; top: 0; left: 0; display: none; background: #fff; background-size: 40px; padding: 1em;}
 .tab_content > div.active {display: block;}
