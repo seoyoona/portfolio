@@ -6,8 +6,11 @@ header nav .header_wrap .gnb { width: 50%; }
 header nav .header_wrap .gnb ul { display: flex; } 
 header nav .header_wrap .gnb ul li { margin-right: 3rem; } 
 header nav .header_wrap .gnb ul li a { font-size: 1.6rem; font-weight: 700; } 
-header .gnb>ul>li { text-transform: uppercase; cursor: pointer;} 
+header .gnb>ul>li { text-transform: uppercase; cursor: pointer; position: relative;} 
 header .gnb>ul>li>a{ text-decoration: none;} 
+header nav .gnb>ul>li:before{width: .5rem; height: .5rem; background: var(--primary); position: absolute; bottom: -100%; left: 50%; transform: translateX(-50%); content: ''; border-radius: 50%; display: none;}
+header nav .gnb li:hover a{color: var(--primary);}
+header nav .gnb li:hover::before{display: block;}
 
 header nav .header_wrap .logo { width: 60%; justify-content: center; align-items: center; position: absolute; left: 20%; top: 1rem; } 
 header nav .header_wrap .logo .logo_img { height: 8rem; justify-content: center; align-items: center; text-align: center; } 
@@ -48,12 +51,24 @@ main .advantage .adv_text { font-size: 1.8rem; margin-top: 2rem; text-align: cen
 main .advantage .skill_box { display: flex; flex-direction: column; text-align: center; font-size: 1.4rem; } 
 main .advantage .language { display: flex;justify-content: space-evenly; width: 100%; height: auto; } 
 main .advantage .lang_text { width: 20rem; height: 10rem; line-height: 10rem; font-size: 1.8rem; } 
-main .advantage .lang_bar { width: 80rem; height: 10rem; line-height: 5rem; } 
+main .advantage .lang_bar { width: 80rem; height: 10rem; line-height: 5rem; }
+main .advantage .adv_box img{filter: grayscale(100%); transition: filter 0.3s ease;} 
 main .advantage .programming .adv_box img { height: 40%; margin-top: 30%; } 
 main .advantage .tools .adv_box img { height: 30%; margin-top: 40%; } 
-main .advantage .percent { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Amiri', serif; } 
 main .advantage .language .adv_box img { height: 35%; margin-top: 35%; } 
+main .advantage .percent { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Amiri', serif; } 
+main .advantage .adv_box:hover img{animation: bounce 1s; filter: grayscale(0%);} 
 
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
 /* .tooltip { position:relative; float:right;;} 
 .tooltip > .tooltip-inner { background-color: #eebf3f; padding:5px 15px; color:rgb(23,44,66); font-weight:bold; font-size:13px; } 
 .tooltip-arrow { border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f; } 
@@ -77,7 +92,7 @@ main .project .project_wrap .window_wrapR { position: absolute; top: 10%; right:
 main .project .project_wrap .window_wrapR img { width: 100%; } 
 main .project .project_wrap .window_wrapL img { width: 100%; } 
 main .project .project_wrap .pj_btn{display: flex; margin-top: 4rem;}
-main .project .project_wrap .pj_btn li{width: 12rem; height: 5rem; border: 3px solid var(--primary); border-radius: 3rem; text-align: center; margin: 0 1.4rem; }
+main .project .project_wrap .pj_btn li{width: 12rem; height: 5rem; border: 3px solid var(--primary); border-radius: 3rem; text-align: center; margin: 0 1.4rem; transition: all .3s ease-in-out;}
 main .project .project_wrap .pj_btn li a{font-size: 1.6rem; line-height: 5rem; text-decoration: none; }
 main .project .project_wrap .pj_btn li:hover{background: var(--primary);}
 main .project .project_wrap .pj_btn li:hover a{color: #fff;}
