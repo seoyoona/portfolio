@@ -17,10 +17,10 @@
                     <div class="container">
                         <div class="gnb">
                             <ul>
-                                <li><a href="#">about&nbsp;me</a></li>
-                                <li><a href="#">advantage</a></li>
-                                <li><a href="#">experience</a></li>
-                                <li><a href="#">projects</a></li>
+                                <li><a href="#about_me">about&nbsp;me</a></li>
+                                <li><a href="#advantage">advantage</a></li>
+                                <li><a href="#experience">experience</a></li>
+                                <li><a href="#project">projects</a></li>
                             </ul>
                         </div>
                         <div class="logo">
@@ -39,7 +39,7 @@
             </nav>
         </header>
         <main>
-            <section class="about_me">
+            <section class="about_me" id="about_me">
                 <div class="container">
                     <div class="intro_title">
                         <p>세상의 모든 색을 담는 <span class="coloring">컬러링북</span></p>
@@ -47,9 +47,11 @@
                     </div>
                     <div class="intro_info">
                         <div class="info_col_left">
-                            <div class="biography">
-                                <p class="intro_info_title">BIOGRAPHY</p>
-                                <p class="intro_info_text">프랑스 국립 미술 대학교에서 미술 전공을 하였습니다. <br><br>한국에 돌아와, 경영학과를 졸업하여 외국어와 디자인 업무를 중점적으로 맡고있습니다.</p>
+                            <div class="intro_lang">
+                                <p class="intro_info_title">LANGUAGE</p>
+                                <p class="intro_info_text"> 3개국어 가능</p>
+                                <p class="intro_info_text"> English <span class="institut_name">(회화 가능)</span> </p>
+                                <p class="intro_info_text"> French <span class="institut_name">(회화 가능)</span></p>
                             </div>
                             <div class="contact ">
                                 <p class="intro_info_title">CONTACT</p>
@@ -84,17 +86,12 @@
                                 <p class="intro_info_text">클레비<br><span class="institut_name">디자인 업무</span></p>
                                 <p class="intro_info_text">개인과외<br><span class="institut_name">프랑스어 | 영어회화 | 피아노 | 방문수업</span></p>
                             </div>
-                            <div class="intro_lang">
-                                <p class="intro_info_title">LANGUAGE</p>
-                                <p class="intro_info_text"><span class="institut_name">(Advanced)</span> English </p>
-                                <p class="intro_info_text"><span class="institut_name">(Advanced)</span> French </p>
-                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <hr>
-            <section class="advantage">
+            <section class="advantage" id="advantage">
                 <div class="container">
                     <h1>My Advantage</h1>
                     <h2>Skills</h2>
@@ -182,43 +179,25 @@
                     </ul>
                     <h2>Language</h2>
                     <ul class="language">
-                        <li class="skill_bar eng">
-                            <div class="lang_text">English</div>
-                            <div class="lang_bar">
-                                <div class="barWrapper">
-                                    <span class="progressText"><B>ENGLISH</B></span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" >   
-                                            <div class="tooltip fade top in" role="tooltip" id="tooltip670507" style="top: -40px; left: 28.7969px; display: block;">
-                                                <div class="tooltip-arrow" style="left: 50%; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f;"></div>
-                                                <div class="tooltip-inner">98%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <li class="skill_box eng">
+                            <div class="adv_box">
+                                <img src="img/eng.png" alt="english">
+                                <p class="percent">98%</p>
                             </div>
+                            <div class="adv_text">English</div>
                         </li>
-                        <li class="skill_bar fr">
-                            <div class="lang_text">French</div>
-                            <div class="lang_bar">
-                                <div class="barWrapper">
-                                    <span class="progressText"><B>French</B></span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" >   
-                                            <div class="tooltip fade top in" role="tooltip" id="tooltip670507" style="top: -40px; left: 28.7969px; display: block;">
-                                                <div class="tooltip-arrow" style="left: 50%; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f;"></div>
-                                                <div class="tooltip-inner">95%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <li class="skill_box fr">
+                            <div class="adv_box">
+                                <img src="img/fr.png" alt="french">
+                                <p class="percent">98%</p>
                             </div>
+                            <div class="adv_text">French</div>
                         </li>
                     </ul>
                 </div>
             </section>
             <hr>
-            <section class="experience">
+            <section class="experience" id="experience">
                 <div class="container">
                     <h1>Education & Experience</h1>
                     <div class="ex_wrap">
@@ -241,7 +220,7 @@
                 </div>
             </section>
             <hr>
-            <section class="project">
+            <section class="project" id="project">
                 <div class="container">
                     <h1>My Latest Projects</h1>
                     <div class="project_wrap">
@@ -252,12 +231,17 @@
                             <div class="project_description">
                                 <p>구현기술 : html, css, javascript, jquery, scss, figma</p>
                                 <p>배포매체 : Desktop, Tablet, Mobile</p>
-                                <p>작업기간 : 2달</p>
+                                <p>작업기간 : 4주</p>
                                 <p>본인기여도 100%</p>
                                 <p>브라우저 호환성 :</p>
                                 <p>제작 페이지 수 : 1</p>
                                 <p>특징 : </p>
                             </div>
+                            <ul class="pj_btn">
+                                <li><a href="#">배포페이지</a></li>
+                                <li><a href="#">깃허브</a></li>
+                                <li><a href="#">기획문서</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="project_wrap">
@@ -266,12 +250,17 @@
                             <div class="project_description">
                                 <p>구현기술 : html, css, javascript, jquery, figma, illustrator</p>
                                 <p>배포매체 : Desktop, Tablet, Mobile</p>
-                                <p>작업기간 : 2달</p>
+                                <p>작업기간 : 5주</p>
                                 <p>본인기여도 100%</p>
                                 <p>브라우저 호환성 :</p>
                                 <p>제작 페이지 수 : 1</p>
                                 <p>특징 : 반응형</p>
                             </div>
+                            <ul class="pj_btn">
+                                <li><a href="#">배포페이지</a></li>
+                                <li><a href="#">깃허브</a></li>
+                                <li><a href="#">기획문서</a></li>
+                            </ul>
                         </div>
                         <img src="img/mac_window.png" alt="project">
                         <div class="window_wrapR"><a href="https://seoyoona.github.io/project_2/"><img class="window_bg" src="img/pakabox.png" alt="project2"></a></div>
@@ -284,26 +273,36 @@
                             <div class="project_description">
                                 <p>구현기술 : html, css, javascript, jquery, figma, illustrator</p>
                                 <p>배포매체 : Desktop, Tablet, Mobile</p>
-                                <p>작업기간 : 2달</p>
+                                <p>작업기간 : 4주</p>
                                 <p>본인기여도 100%</p>
                                 <p>브라우저 호환성 :</p>
                                 <p>제작 페이지 수 : 1</p>
                                 <p>특징 : 반응형</p>
                             </div>
+                            <ul class="pj_btn">
+                                <li><a href="#">배포페이지</a></li>
+                                <li><a href="#">깃허브</a></li>
+                                <li><a href="#">기획문서</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="project_wrap">
                         <div class="project_text">
-                            <p class="project_title">Project 4. <span class="project_title_cap">Lorem Ipsum</span></p>
+                            <p class="project_title">Project 4. <span class="project_title_cap">해피하개</span></p>
                             <div class="project_description">
-                                <p>구현기술 : html, css, javascript, jquery, figma, illustrator</p>
-                                <p>배포매체 : Desktop, Tablet, Mobile</p>
-                                <p>작업기간 : 2달</p>
-                                <p>본인기여도 100%</p>
+                                <p>구현기술 : figma, illustrator, photoshop</p>
+                                <p>배포매체 : Mobile</p>
+                                <p>작업기간 : 4주</p>
+                                <p>본인기여도 : 33%</p>
                                 <p>브라우저 호환성 :</p>
                                 <p>제작 페이지 수 : 1</p>
-                                <p>특징 : 반응형</p>
+                                <p>특징 : 모바일 어플리케이션</p>
                             </div>
+                            <ul class="pj_btn">
+                                <li><a href="#">배포페이지</a></li>
+                                <li><a href="#">깃허브</a></li>
+                                <li><a href="#">기획문서</a></li>
+                            </ul>
                         </div>
                         <img src="img/mac_window.png" alt="project">
                         <div class="window_wrapR"><a href="https://seoyoona.github.io/project_2/"><img class="window_bg" src="img/pakabox.png" alt="project2"></a></div>

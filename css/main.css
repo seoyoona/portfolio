@@ -6,7 +6,8 @@ header nav .header_wrap .gnb { width: 50%; }
 header nav .header_wrap .gnb ul { display: flex; } 
 header nav .header_wrap .gnb ul li { margin-right: 3rem; } 
 header nav .header_wrap .gnb ul li a { font-size: 1.6rem; font-weight: 700; } 
-header .gnb>ul>li { text-transform: uppercase; } 
+header .gnb>ul>li { text-transform: uppercase; cursor: pointer;} 
+header .gnb>ul>li>a{ text-decoration: none;} 
 
 header nav .header_wrap .logo { width: 60%; justify-content: center; align-items: center; position: absolute; left: 20%; top: 1rem; } 
 header nav .header_wrap .logo .logo_img { height: 8rem; justify-content: center; align-items: center; text-align: center; } 
@@ -21,7 +22,7 @@ header nav .header_wrap .sns_link ul li { margin-right: 2rem; font-size: 2rem; }
 main { width: 100%; height: 100%; } 
 main section { margin-top: 5rem; margin-bottom: 5rem; } 
 
-main .about_me { height: 120rem; } 
+main .about_me { height: 120rem;} 
 main .about_me .intro_title { font-size: 5rem; text-align: center; position: relative; line-height: 150%; margin-bottom: 5rem; } 
 main .about_me .intro_title .coloring { color: var(--primary); } 
 main .about_me .intro_title::before { content: '"'; display: block; position: absolute; top: 0; left: 20%; color: var(--primary); } 
@@ -30,7 +31,7 @@ main .about_me .intro_title::after { content: '"'; display: block; position: abs
 main .about_me .profile { position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: 35%; height: 86rem; border: 4px solid #d9d9d9; justify-content: center; align-items: center; border-radius: 45%; } 
 main .about_me .profile_img { width: 92%; height: 94%; background: #d9d9d9; transform: translate(2.5rem, 2.5rem); border-radius: 45%; background : url('../img/profile_img.JPEG') no-repeat center top / cover; } 
 
-main .about_me .intro_info { width: 100%; height: 100%; display: flex; justify-content: space-between; align-content: center; font-size: 1.4rem; } 
+main .about_me .intro_info { width: 100%; height: 100%; display: flex; justify-content: space-between; align-content: center; font-size: 1.4rem; margin-top: 1rem; } 
 main .about_me .info_col_right, .info_col_left { flex-direction:column; width: 50%; } 
 main .about_me .info_col_left .intro_info_text { width: 33%; } 
 main .about_me .info_col_right { text-align: right; } 
@@ -45,20 +46,20 @@ main .advantage ul { display: flex; justify-content: space-between; align-items:
 main .advantage .adv_box { background: #d9d9d9; width: 20rem; height: 28rem; border-radius: 15rem; } 
 main .advantage .adv_text { font-size: 1.8rem; margin-top: 2rem; text-align: center; } 
 main .advantage .skill_box { display: flex; flex-direction: column; text-align: center; font-size: 1.4rem; } 
-main .advantage .skill_bar { display: flex; } 
-main .advantage .language { display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: auto; } 
+main .advantage .language { display: flex;justify-content: space-evenly; width: 100%; height: auto; } 
 main .advantage .lang_text { width: 20rem; height: 10rem; line-height: 10rem; font-size: 1.8rem; } 
 main .advantage .lang_bar { width: 80rem; height: 10rem; line-height: 5rem; } 
 main .advantage .programming .adv_box img { height: 40%; margin-top: 30%; } 
 main .advantage .tools .adv_box img { height: 30%; margin-top: 40%; } 
 main .advantage .percent { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Amiri', serif; } 
+main .advantage .language .adv_box img { height: 35%; margin-top: 35%; } 
 
-.tooltip { position:relative; float:right;;} 
+/* .tooltip { position:relative; float:right;;} 
 .tooltip > .tooltip-inner { background-color: #eebf3f; padding:5px 15px; color:rgb(23,44,66); font-weight:bold; font-size:13px; } 
 .tooltip-arrow { border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f; } 
 .progress { border-radius:0; overflow:visible; } 
 .progress-bar { background:rgb(23,44,60); -webkit-transition: width 1.5s ease-in-out; transition: width 1.5s ease-in-out; } 
- 
+  */
 
 main .experience .ex_wrap { display: flex; justify-content: space-between; } 
 main .experience .ex_wrap ul { display: flex; justify-content: left; flex-direction: column; } 
@@ -75,6 +76,11 @@ main .project .project_wrap .window_wrapL { position: absolute; top: 10%; left: 
 main .project .project_wrap .window_wrapR { position: absolute; top: 10%; right: 3%; width: 44%; height: 80%; overflow: scroll; } 
 main .project .project_wrap .window_wrapR img { width: 100%; } 
 main .project .project_wrap .window_wrapL img { width: 100%; } 
+main .project .project_wrap .pj_btn{display: flex; margin-top: 4rem;}
+main .project .project_wrap .pj_btn li{width: 12rem; height: 5rem; border: 3px solid var(--primary); border-radius: 3rem; text-align: center; margin: 0 1.4rem; }
+main .project .project_wrap .pj_btn li a{font-size: 1.6rem; line-height: 5rem; text-decoration: none; }
+main .project .project_wrap .pj_btn li:hover{background: var(--primary);}
+main .project .project_wrap .pj_btn li:hover a{color: #fff;}
 
 main .photos {height: 110rem;}
 .tab_btn {display: flex; justify-content: space-evenly; margin-bottom: 10rem;}
