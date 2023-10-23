@@ -19,7 +19,7 @@
     <div class="wrap">
         <header>
             <nav>
-                <div class="header_wrap">
+                <div class="header_wrap" id="top">
                     <div class="container">
                         <div class="gnb">
                             <ul>
@@ -43,14 +43,12 @@
                     </div>
                 </div>
             </nav>
+            <a href="#top" class="go-top" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
         </header>
         <main>
-            <section class="about_me" id="about_me">
+            <section class="about_me section" id="about_me">
                 <div class="container">
-                    <div class="intro_title">
-                        <p>세상의 모든 색을 담는 <span class="coloring">컬러링북</span></p>
-                        <p>퍼블리셔 서유나입니다</p>
-                    </div>
+                    <div class="intro_title" id="str"></div>
                     <div class="intro_info">
                         <div class="info_col_left">
                             <div class="intro_lang">
@@ -97,7 +95,7 @@
                 </div>
             </section>
             <hr>
-            <section class="advantage" id="advantage">
+            <section class="advantage section" id="advantage">
                 <div class="container">
                     <h1>My Advantage</h1>
                     <h2>Skills</h2>
@@ -105,43 +103,55 @@
                         <li class="skill_box html">
                             <div class="adv_box">
                                 <img src="img/html_icon.png" alt="html">
-                                <p class="percent">98%</p>
+                                <div class="progress-bar--animate-circle" data-progress="98">
+                                    <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                </div>                            
                             </div>
                             <div class="adv_text">HTML</div>
                         </li>
                         <li class="skill_box css">
                             <div class="adv_box">
                                 <img src="img/css_icon.png" alt="css">
-                                <p class="percent">98%</p>
-                            </div>
+                                <div class="progress-bar--animate-circle" data-progress="97">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">CSS</div>
                         </li>
                         <li class="skill_box js">
                             <div class="adv_box">
                                 <img src="img/js_icon.png" alt="js">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="84">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">JS/JQ</div>
                         </li>
                         <li class="skill_box scss">
                             <div class="adv_box">
                                 <img src="img/scss_icon.svg" alt="scss">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="80">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">SCSS</div>
                         </li>
                         <li class="skill_box boot">
                             <div class="adv_box">
                                 <img src="img/bootstrap_icon.png" alt="bootstrap">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="76">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">BOOTSTRAP</div>
                         </li>
                         <li class="skill_box git">
                             <div class="adv_box">
                                 <img src="img/git_icon.png" alt="git">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="96">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">GIT</div>
                         </li>
                     </ul>
@@ -150,36 +160,46 @@
                         <li class="skill_box figma">
                             <div class="adv_box">
                                 <img src="img/figma_icon.png" alt="">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="98">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">Figma</div>
                         </li>
                         <li class="skill_box ai">
                             <div class="adv_box">
                                 <img src="img/ai_icon.png" alt="">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="98">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">Illustrator</div>
                         </li>
                         <li class="skill_box ps">
                             <div class="adv_box">
                                 <img src="img/ps_icon.png" alt="">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="97">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">Photoshop</div>
                         </li>
                         <li class="skill_box ae">
                             <div class="adv_box">
                                 <img src="img/ae_icon.png" alt="">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="70">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">AfterEffect</div>
                         </li>
                         <li class="skill_box pre">
                             <div class="adv_box">
                                 <img src="img/pr_icon.png" alt="">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="76">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">PremierPro</div>
                         </li>
                     </ul>
@@ -188,22 +208,26 @@
                         <li class="skill_box eng">
                             <div class="adv_box">
                                 <img src="img/eng.png" alt="english">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="99">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">English</div>
                         </li>
                         <li class="skill_box fr">
                             <div class="adv_box">
                                 <img src="img/fr.png" alt="french">
-                                <p class="percent">98%</p>
-                            </div>
+                                    <div class="progress-bar--animate-circle" data-progress="97">
+                                        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+                                    </div>
+                                </div>
                             <div class="adv_text">French</div>
                         </li>
                     </ul>
                 </div>
             </section>
             <hr>
-            <section class="experience" id="experience">
+            <section class="experience section" id="experience">
                 <div class="container">
                     <h1>Education & Experience</h1>
                     <div class="exp_wrap">
@@ -268,7 +292,7 @@
                 </div>
             </section>
             <hr>
-            <section class="project" id="project">
+            <section class="project section" id="project">
                 <div class="container">
                     <h1>My Latest Projects</h1>
                     <div class="project_wrap">
@@ -295,12 +319,11 @@
                         <div class="item right">
                             <div class="tit"><span class="num">Project 1.</span> 서울교육대학교</div>
                             <div class="txt">
-                                <p>구현기술 : html, css, javascript, jquery, scss, figma</p>
+                                <p>구현기술 : html, css, javascript, jquery, figma</p>
                                 <p>배포매체 : Desktop, Tablet, Mobile</p>
                                 <p>작업기간 : 7주</p>
                                 <p>본인기여도 100%</p>
                                 <p>브라우저 호환성 :</p>
-                                <p>제작 페이지 수 : 1</p>
                                 <p>특징 : </p>
                             </div>
                         </div>
@@ -329,12 +352,11 @@
                         <div class="item right">
                             <div class="tit"><span class="num">Project 2.</span> PAKABOX</div>
                             <div class="txt">
-                                <p>구현기술 : html, css, javascript, jquery, scss, figma</p>
+                                <p style="line-height: 150%;">구현기술 : html, css, javascript, jquery<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figma, illustrator, photoshop</p>
                                 <p>배포매체 : Desktop, Tablet, Mobile</p>
                                 <p>작업기간 : 5주</p>
                                 <p>본인기여도 100%</p>
                                 <p>브라우저 호환성 :</p>
-                                <p>제작 페이지 수 : 1</p>
                                 <p>특징 : </p>
                             </div>
                         </div>
@@ -363,12 +385,11 @@
                         <div class="item right">
                             <div class="tit"><span class="num">Project 3.</span> Celpi</div>
                             <div class="txt">
-                                <p>구현기술 : html, css, javascript, jquery, scss, figma</p>
+                                <p>구현기술 : html, css, javascript, jquery, scss</p>
                                 <p>배포매체 : Desktop, Tablet, Mobile</p>
                                 <p>작업기간 : 1주</p>
                                 <p>본인기여도 100%</p>
                                 <p>브라우저 호환성 :</p>
-                                <p>제작 페이지 수 : 1</p>
                                 <p>특징 : </p>
                             </div>
                         </div>
@@ -391,12 +412,12 @@
                         <div class="item right">
                             <div class="tit"><span class="num">Project 4.</span> 해피하개</div>
                             <div class="txt">
-                                <p>구현기술 : figma, ai, ps</p>
+                                <p>구현기술 : figma, illustrator, photoshp</p>
                                 <p>배포매체 : Mobile</p>
-                                <p>작업기간 : 3주</p>
-                                <p>본인기여도 40%</p>
+                                <p>작업기간 : 2주</p>
+                                <p>본인기여도 : 40%</p>
                                 <p>브라우저 호환성 :</p>
-                                <p>제작 페이지 수 : 1</p>
+                                <p>제작 페이지 수 : 9</p>
                                 <p>특징 : </p>
                             </div>
                         </div>
@@ -404,7 +425,7 @@
                 </div>
             </section>
             <hr>
-            <section class="photos">
+            <section class="photos section">
                 <div class="container">
                     <h1>Art Works</h1>
                     <div class="tab_wrap">
@@ -491,7 +512,8 @@
         </footer>
     </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 </html>

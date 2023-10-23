@@ -13,6 +13,90 @@
    //  }  
   // });
 
+// text
+var string = "세상의 모든 색을 담는 컬러링북 퍼블리셔 서유나입니다";
+var str = string.split("");
+var el = document.getElementById('str');
+
+(function animate() {
+    if(str.length === 0) {
+        str = string.split(""); // Reset the array
+
+        // Wait for 2 seconds before clearing the output and starting again
+        setTimeout(function() {
+            el.innerHTML = ""; // Clear the output
+            animate();
+        }, 10000);
+    } else {
+        el.innerHTML += str.shift();
+        
+        setTimeout(animate, 90);
+    }
+})();
+
+
+// gnb
+//변수초기화
+const winGnb = $(window);
+const gnb = $('.gnb>ul>li');
+const sectionsGnb = $('.section');
+// const sideNav = $('.sideNav>li');
+//리팩토링
+//refactoring
+function scrollToSection(index) {
+	let section = sectionsGnb.eq(index);
+	let offset = section.offset().top;
+	$('html,body').stop().animate({ scrollTop: offset }, 1000, 'easeOutCirc');
+}
+gnb.on({
+	click: function (e) {
+		e.preventDefault();
+		let index = $(this).index();
+    scrollToSection(index)
+	},
+});
+// sideNav.on({
+// 	click: function (e) {
+// 		e.preventDefault();
+// 		let index = $(this).index();
+//     scrollToSection(index)
+// 	},
+// });
+winGnb.on('scroll', function () {
+	let sct = winGnb.scrollTop();
+	sectionsGnb.each(function (i) {
+		if (sct >= sectionsGnb.eq(i).offset().top - 300) {
+			//gnb.removeClass('on')
+			gnb.eq(i).addClass('on').siblings().removeClass('on');
+			sideNav.eq(i).addClass('on').siblings().removeClass('on');
+			sectionsGnb.eq(i).addClass('on').siblings().removeClass('on');
+		}
+	});
+	//if (sct > 400) {
+	//	$('nav').addClass('sticky');
+	//}else{
+	//  $('nav').removeClass('sticky');
+	//}
+	sct > 400 ? $('nav').addClass('sticky') : $('nav').removeClass('sticky');
+});
+// go-top
+$(function () {
+	// Show/hide the footer button
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 300) {
+			$('.go-top').fadeIn(200);
+		} else {
+			$('.go-top').fadeOut(200);
+		}
+	});
+
+	$('.go-top').click(function (e) {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: 0 }, 500, 'easeOutQuart');
+	});
+});
+
+
 // tab_btn
 const tabWrapper = document.querySelectorAll('.tab_wrap');
 function singleTab() {
@@ -60,6 +144,72 @@ function controlClass(old) {
 	});
 }
 
+// skill
+
+(function ($){
+
+	$.fn.bekeyProgressbar = function(options){
+	
+		options = $.extend({
+		  animate     : true,
+		  animateText : true
+		}, options);
+	
+		const $this = $(this);
+	  
+		const $progressBar = $this;
+		const $progressCount = $progressBar.find('.progress-bar-percentage--count');
+		const $circle = $progressBar.find('.progress-bar-circle');
+		const percentageProgress = $progressBar.data('progress');
+		const percentageRemaining = (100 - percentageProgress);
+		const percentageText = percentageProgress;
+	  
+		//Calcule la circonférence du cercle
+		const radius = $circle.attr('r');
+		const diameter = radius * 2;
+		const circumference = Math.round(Math.PI * diameter);
+	
+		//Calcule le pourcentage d'avancement
+		const percentage =  circumference * percentageRemaining / 100;
+	
+		$circle.css({
+		  'stroke-dasharray' : circumference,
+		  'stroke-dashoffset' : percentage
+		})
+		
+		//Animation de la barre de progression
+		if(options.animate === true){
+		  $circle.css({
+			'stroke-dashoffset' : circumference
+		  }).animate({
+			'stroke-dashoffset' : percentage
+		  }, 3000 )
+		}
+		
+		//Animation du texte (pourcentage)
+		if(options.animateText == true){
+	
+		  $({ Counter: 0 }).animate(
+			{ Counter: percentageText },
+			{ duration: 3000,
+			 step: function () {
+			   $progressCount.text( Math.ceil(this.Counter)+'%');
+			 }
+			});
+	
+		}else{
+		  $progressCount.text( percentageText+'%');
+		}
+	  
+	};
+	
+	})(jQuery);
+	
+	
+	$('.progress-bar--animate-circle').each(function() {
+		$(this).bekeyProgressbar();
+	});
+
 // projects
 const win = $(window);
 const sections = $('.project_wrap');
@@ -67,7 +217,7 @@ let speed = Math.floor(win.height() * 0.5);
 let topArr = [];
 let winSCT;
 console.log(speed);
-//sections.offsetTop
+
 sections.each(function (i, o) {
 	const sectionTop = $(o).offset().top;
 	topArr.push(sectionTop);
