@@ -126,6 +126,7 @@ main .photos { height:auto; width: 100%; }
 .tab_video { width: 50rem; height: 30rem; margin-top: 3rem; overflow: hidden; border-radius: 5rem; } 
 .tab_photo>img, .tab_photo>video { height: 100%; } 
 .tab_photo>.drawing{transform: translateX(-13%);}
+/* .tab_photo>.drawing_wall{transform: translateX(-16%) translateY(5%);} */
 .tab_photo>.menu{transform: scale(1.4) translateX(10%) translateY(5%);}
 .tab_photo>.jean{transform: translateX(-15%) ;}
 .tab_photo>.tag{transform: scale(1.2) translateX(-5%) ;}
