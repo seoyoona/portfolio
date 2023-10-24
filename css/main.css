@@ -30,7 +30,7 @@ main section { margin-top: 5rem; margin-bottom: 5rem; }
 main .section{opacity: 0; transition:  all .5s ease;}
 main .section.show{opacity: 1;}
 
-main .about_me { height: 120rem; transition: all .7s ease; } 
+main .about_me { height: 120rem;  } 
 main .about_me .intro_title { font-size: 5rem; text-align: center; position: relative; line-height: 150%; margin-bottom: 5rem; } 
 main .about_me .intro_title .coloring { color: var(--primary); } 
 main .about_me .intro_title::before { content: '"'; display: block; position: absolute; top: 0; left: -10%; color: var(--primary); } 
@@ -45,11 +45,14 @@ main .about_me .profile_img { width: 92%; height: 94%; background: #d9d9d9; tran
 main .about_me .intro_info { width: 100%; height: 100%; display: flex; justify-content: space-between; align-content: center; font-size: 1.4rem; margin-top: 15rem; } 
 main .about_me .info_col_right, .info_col_left { flex-direction:column; width: 50%; } 
 main .about_me .info_col_left .intro_info_text { width: 33%; } 
-main .about_me .info_col_right { text-align: right; } 
+main .about_me .info_col_left { transform: translateX(-100%);  transition: all .7s ease-in-out; opacity: 0;} 
+main .about_me .info_col_right { text-align: right; transform: translateX(100%);   transition: all .7s ease-in-out; opacity: 0;} 
 main .about_me .intro_info .biography,.contact,.license { flex-direction: column; } 
 main .about_me .intro_info .intro_info_title { margin-bottom: 2rem; margin-top: 10rem; font-size: 1.4rem; opacity: 50%; } 
 main .about_me .intro_info .intro_info_text, .adress, .email,.tel { line-height: 200%; font-size: 1.8rem; } 
 main .about_me .intro_info .institut_name { color: #999; font-size: 1.6rem; } 
+main .about_me .info_col_left.show{transform: translateX(0); opacity: 1;}
+main .about_me .info_col_right.show{transform: translateX(0); opacity: 1;}
 
 main h1 { font-size: 4rem; text-align: center; margin-bottom: 10rem; margin-top: 3rem; font-family: 'Amiri', serif; } 
 main h2 { font-size: 2.8rem; text-align: center; margin-bottom: 5rem; margin-top: 10rem; font-family: 'Amiri', serif; } 
@@ -96,7 +99,7 @@ main .project_wrap .mockup.pc { position: relative; width: 75%; height: 100%; ma
 main .project_wrap .mockup.pc .mask { z-index: 8;width: 58.5rem;height: 62%;overflow: hidden;left: 4%;top: 4.5%; border-radius: 0 0 1.25rem 1.25rem; } 
 main .project_wrap .mockup.mobile{position: relative; width: 18%; height: 100%; top: -58%; left: 80%; z-index: 15;}
 main .project_wrap .mockup.mobile .mask{ z-index: 8;width: 13.2rem;height: 49.3%;overflow: hidden;left: 7.7%;top: 2%; border-radius: 1.2rem;}
-main .project_wrap .mockup.tablet{position: relative; width: 45%; height: 100%; top: -150%; left: -10%; z-index: 15;}
+main .project_wrap .mockup.tablet{position: relative; width: 45%; height: 100%; top: -150%; left: -15%; z-index: 15;}
 main .project_wrap .mockup.tablet .mask{  z-index: 8;width: 32.5rem;height: 42%;overflow: hidden;left: 8%; top: 2%; }
 .screen, .device { width: 100%; } 
 .screen { z-index: 3; } 

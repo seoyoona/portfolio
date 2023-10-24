@@ -82,6 +82,26 @@ $(function () {
 	});
 });
 
+// intro_info anim
+$(window).on('scroll', () => {
+	let winSCT;
+	const sections = $('section');
+	winSCT = $(window).scrollTop();
+	sections.each(function (idx, o) {
+		const tg = $(this);
+		const tgtop = tg.offset().top;
+		if (winSCT > tgtop) {
+			tg.find('.info_col_left').css('transform', 'translateX(0%)');
+			tg.find('.info_col_left').css('opacity', 1);
+			tg.find('.info_col_right').css('transform', 'translateX(0%)');
+			tg.find('.info_col_right').css('opacity', 1);
+		} else if (winSCT > tgtop) {
+			tg.find('.info_col_right').css('transform', 'translateX(0%)');
+			tg.find('.info_col_right').css('opacity', 1);
+		} 
+	});
+});
+
 // animation
 function scroll(){
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY;
