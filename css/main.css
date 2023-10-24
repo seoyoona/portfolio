@@ -96,7 +96,7 @@ main .project_wrap .item.left { left: -0%; width: 60%; transition: left 1s ease-
 main .project_wrap .item.right { width: 30%; right: 0; margin-top: 6%; } 
 .left .mockup img, .left .mockup .mask { position: absolute; top: 0; left: 0; } 
 main .project_wrap .mockup.pc { position: relative; width: 75%; height: 100%; margin-left: 100px; } 
-main .project_wrap .mockup.pc .mask { z-index: 8;width: 58.5rem;height: 62%;overflow: hidden;left: 4%;top: 4.5%; border-radius: 0 0 1.25rem 1.25rem; } 
+main .project_wrap .mockup.pc .mask { z-index: 8;width: 58.5rem;height: 65%;overflow: hidden;left: 4%;top: 4.5%; border-radius: 0 0 1.25rem 1.25rem; } 
 main .project_wrap .mockup.mobile{position: relative; width: 18%; height: 100%; top: -58%; left: 80%; z-index: 15;}
 main .project_wrap .mockup.mobile .mask{ z-index: 8;width: 13.2rem;height: 49.3%;overflow: hidden;left: 7.7%;top: 2%; border-radius: 1.2rem;}
 main .project_wrap .mockup.tablet{position: relative; width: 45%; height: 100%; top: -150%; left: -15%; z-index: 15;}
