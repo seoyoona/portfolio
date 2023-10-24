@@ -36,13 +36,10 @@ var el = document.getElementById('str');
 
 
 // gnb
-//변수초기화
 const winGnb = $(window);
 const gnb = $('.gnb>ul>li');
 const sectionsGnb = $('.section');
-// const sideNav = $('.sideNav>li');
-//리팩토링
-//refactoring
+
 function scrollToSection(index) {
 	let section = sectionsGnb.eq(index);
 	let offset = section.offset().top;
@@ -55,33 +52,22 @@ gnb.on({
     scrollToSection(index)
 	},
 });
-// sideNav.on({
-// 	click: function (e) {
-// 		e.preventDefault();
-// 		let index = $(this).index();
-//     scrollToSection(index)
-// 	},
-// });
+
 winGnb.on('scroll', function () {
 	let sct = winGnb.scrollTop();
 	sectionsGnb.each(function (i) {
 		if (sct >= sectionsGnb.eq(i).offset().top - 300) {
 			//gnb.removeClass('on')
 			gnb.eq(i).addClass('on').siblings().removeClass('on');
-			sideNav.eq(i).addClass('on').siblings().removeClass('on');
 			sectionsGnb.eq(i).addClass('on').siblings().removeClass('on');
 		}
 	});
-	//if (sct > 400) {
-	//	$('nav').addClass('sticky');
-	//}else{
-	//  $('nav').removeClass('sticky');
-	//}
 	sct > 400 ? $('nav').addClass('sticky') : $('nav').removeClass('sticky');
 });
+
 // go-top
 $(function () {
-	// Show/hide the footer button
+
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 300) {
 			$('.go-top').fadeIn(200);
@@ -95,6 +81,21 @@ $(function () {
 		$('html, body').animate({ scrollTop: 0 }, 500, 'easeOutQuart');
 	});
 });
+
+// animation
+function scroll(){
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY;
+
+    document.querySelectorAll(".section").forEach(item => {
+        if(scrollTop > item.offsetTop - window.innerHeight / 2.5){
+            item.classList.add("show");
+        }
+    });
+
+    requestAnimationFrame(scroll);
+}
+
+scroll();
 
 
 // tab_btn
@@ -200,15 +201,33 @@ function controlClass(old) {
 		}else{
 		  $progressCount.text( percentageText+'%');
 		}
-	  
+		
 	};
 	
 	})(jQuery);
+
+	$(function() {
+		var animated = false;
 	
+		$(window).on('scroll', function () {
+			var scrollTop = $(this).scrollTop();
+			var advantageOffset = $('.advantage').offset().top;
+			var windowHeight = $(this).height();
 	
-	$('.progress-bar--animate-circle').each(function() {
-		$(this).bekeyProgressbar();
+			if (!animated & scrollTop + windowHeight >= advantageOffset) {
+				$('.progress-bar--animate-circle').each(function () {
+					$(this).bekeyProgressbar({
+						animate: true,
+						animateText: true
+					});
+				});
+	
+				animated = true;  
+			}
+		});
 	});
+
+
 
 // projects
 const win = $(window);
@@ -234,16 +253,12 @@ win.on('scroll', () => {
 		sections.eq(2).addClass('is-animated').siblings().removeClass('is-animated');
 		pipScroll();
 	}
-	if (winSCT > topArr[3] - speed && winSCT < topArr[4]) {
+	if (winSCT > topArr[3] - speed ) {
 		sections.eq(3).addClass('is-animated').siblings().removeClass('is-animated');
 		pipScroll();
 	}
-	if (winSCT > topArr[4] - speed) {
-		sections.eq(4).addClass('is-animated').siblings().removeClass('is-animated');
-		pipScroll();
-		console.log(topArr[4],winSCT);
-	}
-});
+})
+
 function pipScroll(params) {
 	const devices = ['.mockup.pc', '.mockup.mobile','.mockup.tablet'];
 	$.each(devices, function (i, deviceEl) {

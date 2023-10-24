@@ -27,8 +27,10 @@ header nav .header_wrap .sns_link ul li { margin-right: 2rem; font-size: 2rem; }
 /* main */
 main { width: 100%; height: 100%; } 
 main section { margin-top: 5rem; margin-bottom: 5rem; } 
+main .section{opacity: 0; transition:  all .5s ease;}
+main .section.show{opacity: 1;}
 
-main .about_me { height: 120rem; } 
+main .about_me { height: 120rem; transition: all .7s ease; } 
 main .about_me .intro_title { font-size: 5rem; text-align: center; position: relative; line-height: 150%; margin-bottom: 5rem; } 
 main .about_me .intro_title .coloring { color: var(--primary); } 
 main .about_me .intro_title::before { content: '"'; display: block; position: absolute; top: 0; left: -10%; color: var(--primary); } 
@@ -40,7 +42,7 @@ main .about_me #str{font-size: 5rem; text-align: center;line-height: 150%; margi
 main .about_me .profile { position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: 35%; height: 86rem; border: 4px solid #d9d9d9; justify-content: center; align-items: center; border-radius: 45%; } 
 main .about_me .profile_img { width: 92%; height: 94%; background: #d9d9d9; transform: translate(2.5rem, 2.5rem); border-radius: 45%; background : url('../img/profile_img.JPEG') no-repeat center top / cover; } 
 
-main .about_me .intro_info { width: 100%; height: 100%; display: flex; justify-content: space-between; align-content: center; font-size: 1.4rem; margin-top: 1rem; } 
+main .about_me .intro_info { width: 100%; height: 100%; display: flex; justify-content: space-between; align-content: center; font-size: 1.4rem; margin-top: 15rem; } 
 main .about_me .info_col_right, .info_col_left { flex-direction:column; width: 50%; } 
 main .about_me .info_col_left .intro_info_text { width: 33%; } 
 main .about_me .info_col_right { text-align: right; } 
