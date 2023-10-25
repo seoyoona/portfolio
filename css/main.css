@@ -126,12 +126,19 @@ main .photos { height:100rem; width: 100%; }
 .tab_video { width: 50rem; height: 30rem; margin-top: 3rem; overflow: hidden; border-radius: 5rem; } 
 .tab_video:before { width: 50rem; height: 30rem; border-radius: 5rem; background: rgba(0,0,0,.5); position: absolute; top: 0; left: 0; content: ''; backdrop-filter: blur(8px); opacity: 0; transition: all .2s ease;  cursor: pointer; z-index: 99; } 
 .tab_video:hover:before { opacity: 1;} 
+.tab_photo:hover .hover_txt{opacity: 1;}
+.tab_video:hover .hover_txt{opacity: 1;}
 .tab_photo>img, .tab_photo>video { height: 100%; } 
 .tab_photo>.drawing{transform: translateX(-13%);}
 .tab_photo>.menu{transform: scale(1.4) translateX(10%) translateY(5%);}
 .tab_photo>.jean{transform: translateX(-15%) ;}
 .tab_photo>.tag{transform: scale(1.2) translateX(-5%) ;}
 .tab_photo>.video{transform: translateX(-16.5%) translateY(6%);}
+
+.hover_txt{position: absolute; width: 28rem; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.8rem; color: #fff; z-index: 999; text-align: center; justify-content: center; align-items: center; line-height: 200%; opacity: 0; transition: all .3 ease; cursor: pointer;}
+.hover_txt i{font-size: 2rem;}
+.modal_box{justify-content: center; align-items: center; text-align: center;}
+.modal_img{width: 85%;}
 
 #modal { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.8); width: 100%; height: 100%; z-index: 2121; display: none; } 
 .modal_container { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 1200px; height: 90%; background-color: #ffffff; } 

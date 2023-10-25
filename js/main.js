@@ -247,12 +247,23 @@ win.on('resize', function () {
 	pipScroll();
 });
 
+// modal_img
+$('.hover_txt').on('click', function() {
+    // Get the URL of the image from the data-img-url attribute of the clicked .hover_txt
+    var imageUrl = $(this).data('img-url');
+
+    // Set the src attribute of the modal image to the image URL
+    $('.modal_img').attr('src', imageUrl);
+
+    // Show the modal
+    $('#modal').css('display', 'block');
+});
 
 // modal
-$(document).ready(function() {
-    $('.tab_photo').on('click', function() {
-        $('#modal').css('display', 'block');
-    });
+// $(document).ready(function() {
+    // $('.tab_photo').on('click', function() {
+    //     $('#modal').css('display', 'block');
+    // });
 
     $('#modal').on('click', function() {
         $(this).css('display', 'none');
@@ -261,4 +272,4 @@ $(document).ready(function() {
 	$('.modal_close_btn').on('click',function(){
 		$('#modal').css('display','none')
 	})
-});
+// });
