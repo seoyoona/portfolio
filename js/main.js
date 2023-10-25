@@ -179,7 +179,7 @@ function chart() {
 			{
 				duration: 1500,
 				step: function (now) {
-					title.text(Math.floor(now));
+					title.text(Math.floor(now)+'%');
 				},
 			}
 		);
@@ -189,10 +189,9 @@ $(window).on('scroll', function() {
     const winScrollTop = $(this).scrollTop();
     const sectionOffsetTop = $('.advantage').offset().top;
 
-    // window height is taken into account for triggering the function a bit earlier
     if (winScrollTop > (sectionOffsetTop - window.innerHeight)) {
         chart();
-        $(window).off('scroll');  // remove the event handler after executing once
+        $(window).off('scroll'); 
     }
 });
 
