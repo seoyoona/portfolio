@@ -67,7 +67,7 @@ main .advantage .adv_box img { filter: grayscale(100%); transition: filter 0.3s 
 main .advantage .programming .adv_box img { height: 40%; margin-top: 30%; } 
 main .advantage .tools .adv_box img { height: 30%; margin-top: 40%; } 
 main .advantage .language .adv_box img { height: 35%; margin-top: 35%; } 
-main .advantage .percent { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Amiri', serif; } 
+main .advantage .percentage { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Amiri', serif; } 
 main .advantage .progress-bar-percentage--count { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Amiri', serif; } 
 main .advantage .adv_box:hover img { animation: bounce 1s; filter: grayscale(0%); } 
 

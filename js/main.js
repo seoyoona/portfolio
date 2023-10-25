@@ -166,88 +166,35 @@ function controlClass(old) {
 }
 
 // skill
-
-(function ($){
-
-	$.fn.bekeyProgressbar = function(options){
-	
-		options = $.extend({
-		  animate     : true,
-		  animateText : true
-		}, options);
-	
-		const $this = $(this);
-	  
-		const $progressBar = $this;
-		const $progressCount = $progressBar.find('.progress-bar-percentage--count');
-		const $circle = $progressBar.find('.progress-bar-circle');
-		const percentageProgress = $progressBar.data('progress');
-		const percentageRemaining = (100 - percentageProgress);
-		const percentageText = percentageProgress;
-	  
-		//Calcule la circonférence du cercle
-		const radius = $circle.attr('r');
-		const diameter = radius * 2;
-		const circumference = Math.round(Math.PI * diameter);
-	
-		//Calcule le pourcentage d'avancement
-		const percentage =  circumference * percentageRemaining / 100;
-	
-		$circle.css({
-		  'stroke-dasharray' : circumference,
-		  'stroke-dashoffset' : percentage
-		})
-		
-		//Animation de la barre de progression
-		if(options.animate === true){
-		  $circle.css({
-			'stroke-dashoffset' : circumference
-		  }).animate({
-			'stroke-dashoffset' : percentage
-		  }, 3000 )
-		}
-		
-		//Animation du texte (pourcentage)
-		if(options.animateText == true){
-	
-		  $({ Counter: 0 }).animate(
-			{ Counter: percentageText },
-			{ duration: 3000,
-			 step: function () {
-			   $progressCount.text( Math.ceil(this.Counter)+'%');
-			 }
-			});
-	
-		}else{
-		  $progressCount.text( percentageText+'%');
-		}
-		
-	};
-	
-	})(jQuery);
-
-	$(function() {
-		var animated = false;
-	
-		$(window).on('scroll', function () {
-			var scrollTop = $(this).scrollTop();
-			var advantageOffset = $('.advantage').offset().top;
-			var windowHeight = $(this).height();
-	
-			if (!animated & scrollTop + windowHeight >= advantageOffset) {
-				$('.progress-bar--animate-circle').each(function () {
-					$(this).bekeyProgressbar({
-						animate: true,
-						animateText: true
-					});
-				});
-	
-				animated = true;  
+chart();
+function chart() {
+	const chart = $('.adv_box');
+	chart.each(function () {
+		const item = $(this);
+		const title = item.find('h3.percentage');
+		const tgNum = Number(title.attr('data-num'));
+		$({ rate: 0 })
+		.animate(
+			{ rate: tgNum },
+			{
+				duration: 1500,
+				step: function (now) {
+					title.text(Math.floor(now));
+				},
 			}
-		});
-	});
+		);
+});
+}
+$(window).on('scroll', function() {
+    const winScrollTop = $(this).scrollTop();
+    const sectionOffsetTop = $('.advantage').offset().top;
 
-
+    // window height is taken into account for triggering the function a bit earlier
+    if (winScrollTop > (sectionOffsetTop - window.innerHeight)) {
+        chart();
+        $(window).off('scroll');  // remove the event handler after executing once
+    }
+});
 
 // projects
 const win = $(window);
