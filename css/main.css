@@ -39,8 +39,8 @@ main .about_me .intro_title::after { content: '"'; display: block; position: abs
 main .about_me #str{font-size: 5rem; text-align: center;line-height: 150%; margin-bottom: 5rem; color: #333; margin:0 36rem; height: 10rem;}
 .primary{color: var(--primary);}
 
-main .about_me .profile { position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: 35%; height: 86rem; border: 4px solid #d9d9d9; justify-content: center; align-items: center; border-radius: 45%; } 
-main .about_me .profile_img { width: 92%; height: 94%; background: #d9d9d9; transform: translate(2.5rem, 2.5rem); border-radius: 45%; background : url('../img/profile_img.JPEG') no-repeat center top / cover; } 
+main .about_me .profile { position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: 650px; height: 850px; border: 4px solid #d9d9d9; justify-content: center; align-items: center; border-radius: 50%; } 
+main .about_me .profile_img { width: 92%; height: 94%; background: #d9d9d9; transform: translate(2.5rem, 2.5rem); border-radius: 50%; background : url('../img/profile_img.JPEG') no-repeat center top / cover; } 
 
 main .about_me .intro_info { width: 100%; height: 100%; display: flex; justify-content: space-between; align-content: center; font-size: 1.4rem; margin-top: 15rem; } 
 main .about_me .info_col_right, .info_col_left { flex-direction:column; width: 50%; } 
