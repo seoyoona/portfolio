@@ -1,18 +1,3 @@
-// lang_bar
-// $(function () { 
-//     $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
-//   });  
-  
-//   // $( window ).scroll(function() {   
-//    // if($( window ).scrollTop() > 10){  // scroll down abit and get the action   
-//     $(".progress-bar").each(function(){
-//       each_bar_width = $(this).attr('aria-valuenow');
-//       $(this).width(each_bar_width + '%');
-//     });
-         
-   //  }  
-  // });
-
 // text
 var string = "세상의 모든 색을 담는 컬러링북 퍼블리셔 서유나입니다";
 var str = string.split("");
@@ -177,7 +162,7 @@ function chart() {
 		.animate(
 			{ rate: tgNum },
 			{
-				duration: 1500,
+				duration: 3000,
 				step: function (now) {
 					title.text(Math.floor(now)+'%');
 				},
