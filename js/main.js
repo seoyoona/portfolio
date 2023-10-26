@@ -211,10 +211,10 @@ win.on('scroll', () => {
 })
 
 function pipScroll(params) {
-	const devices = ['.mockup.pc', '.mockup.mobile','.mockup.tablet'];
-	$.each(devices, function (i, deviceEl) {
-		const device = $(deviceEl);
-		const screen = device.find('.screen');
+	const devices = $('.mockup.pc, .mockup.mobile, .mockup.tablet');
+	devices.each(function (i, deviceEl) {
+		let device = $(this);
+		let screen = device.find('.mask>img');
 		const mask = device.find('.mask');
 		const hightDifference = screen.innerHeight() - mask.innerHeight();
 		console.log(hightDifference);
