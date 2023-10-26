@@ -136,9 +136,11 @@ main .photos { height:100rem; width: 100%; }
 .tab_photo>.video{transform: translateX(-16.5%) translateY(6%);}
 
 .hover_txt{position: absolute; width: 28rem; height: 30rem; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.8rem; color: #fff; z-index: 999; text-align: center; justify-content: center; align-items: center; line-height: 200%; opacity: 0; transition: all .3 ease; cursor: pointer; padding-top: 40%;}
+.tab_video>.hover_txt{padding-top: 22%;}
 .hover_txt i{font-size: 2rem;}
 .modal_box{justify-content: center; align-items: center; text-align: center;}
 .modal_img{width: 85%;}
+.modal_video{width: 100%;}
 
 #modal { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.8); width: 100%; height: 100%; z-index: 2121; display: none; } 
 .modal_container { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 1200px; height: 90%; background-color: #ffffff; } 

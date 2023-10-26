@@ -249,15 +249,27 @@ win.on('resize', function () {
 
 // modal_img
 $('.hover_txt').on('click', function() {
-    // Get the URL of the image from the data-img-url attribute of the clicked .hover_txt
-    var imageUrl = $(this).data('img-url');
 
-    // Set the src attribute of the modal image to the image URL
-    $('.modal_img').attr('src', imageUrl);
+	var imageUrl = $(this).data('img-url');
+    var videoUrl = $(this).data('video-url');
 
-    // Show the modal
-    $('#modal').css('display', 'block');
+	if (imageUrl) {
+        $('.modal_img').attr('src', imageUrl).show();
+    } else {
+        $('.modal_img').hide();
+    }
+
+	if (videoUrl) {
+        $('.modal_video source').attr('src', videoUrl);
+        $('.modal_video')[0].load();
+        $('.modal_video').show();
+    } else {
+        $('.modal_video').hide();
+    }
+
+	$('#modal').css('display', 'block');
 });
+
 
 // modal
 // $(document).ready(function() {
