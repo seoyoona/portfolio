@@ -12,8 +12,10 @@
     <meta property="og:description" content="신입 퍼블리셔 서유나의 포트폴리오입니다.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -209,7 +211,7 @@
                 <div class="container">
                     <h1>Education & Experience</h1>
                     <div class="exp_wrap">
-                        <div class="edu_wrap">
+                        <div class="edu_wrap" data-aos="fade-right">
                             <ul>
                                 <li>
                                     <div class="date">2019.09 - 2021.03</div>
@@ -234,7 +236,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="ex_wrap">
+                        <div class="ex_wrap" data-aos="fade-left">
                             <ul>
                                 <li>
                                     <div class="date">2021.04 - PRESENT</div>
@@ -274,8 +276,8 @@
                 <div class="container">
                     <h1>My Latest Projects</h1>
                     <div class="project_wrap">
-                        <div class="item left">
-                            <div class="mockup pc">
+                        <div class="item left" >
+                            <div class="mockup pc" >
                                 <a href="https://seoyoona.github.io/Project_1/">
                                     <div class="mask"><img src="img/university of edu.png" alt="" class="screen"></div>
                                 </a>
@@ -294,7 +296,7 @@
                                 <img src="img/ipad_2.png" alt="" class="device">
                             </div>
                         </div>
-                        <div class="item right">
+                        <div class="item right" data-aos="fade-left">
                             <div class="tit"><span class="num">Project 1.</span> 서울교육대학교</div>
                             <div class="txt">
                                 <p>구현기술 : html, css, javascript, jquery, figma</p>
@@ -327,7 +329,7 @@
                                 <img src="img/ipad_2.png" alt="" class="device">
                             </div>
                         </div>
-                        <div class="item right">
+                        <div class="item right" data-aos="fade-left">
                             <div class="tit"><span class="num">Project 2.</span> PAKABOX</div>
                             <div class="txt">
                                 <p style="line-height: 150%;">구현기술 : html, css, javascript, jquery<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figma, illustrator, photoshop</p>
@@ -360,7 +362,7 @@
                                 <img src="img/ipad_2.png" alt="" class="device">
                             </div>
                         </div>
-                        <div class="item right">
+                        <div class="item right" data-aos="fade-left">
                             <div class="tit"><span class="num">Project 3.</span> Celpi</div>
                             <div class="txt">
                                 <p>구현기술 : html, css, javascript, jquery, scss</p>
@@ -387,7 +389,7 @@
                                 <img src="img/ipad_2.png" alt="" class="device">
                             </div>
                         </div>
-                        <div class="item right">
+                        <div class="item right" data-aos="fade-left">
                             <div class="tit"><span class="num">Project 4.</span> 해피하개</div>
                             <div class="txt">
                                 <p>구현기술 : figma, illustrator, photoshp</p>
@@ -410,8 +412,8 @@
                         <ul class="tab_btn">
                             <li><a href="#tabs-1" class="active">drawing</a></li>
                             <li><a href="#tabs-2">design</a></li>
-                            <li><a href="#tabs-3">university</a></li>
-                            <li><a href="#tabs-4">video</a></li>
+                            <li><a href="#tabs-3">video</a></li>
+                            <li><a href="#tabs-4">university</a></li>
                         </ul>
                         <div class="tab_content">
                             <div id="tabs-1" class="active">
@@ -480,24 +482,6 @@
                             </div>
                             <div id="tabs-3">
                                 <div class="photo_wrap">
-                                    <div class="tab_photo tab_video">
-                                        <video src="img/univ2.mov" loop muted autoplay alt=""></video>
-                                        <div class="hover_txt" data-img-url="">
-                                            <p>영화 세트 디자인</p>
-                                            <i class="fa-solid fa-plus fa-beat"></i>
-                                        </div>
-                                    </div>
-                                    <div class="tab_photo tab_video">
-                                        <video src="img/univ3.mp4" loop muted autoplay alt=""></video>
-                                        <div class="hover_txt" data-img-url="">
-                                            <p>포토샵 애니메이션</p>
-                                            <i class="fa-solid fa-plus fa-beat"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="tabs-4">
-                                <div class="photo_wrap">
                                     <div class="tab_photo">
                                         <img src="img/Frame 32.png" alt="" class="video">
                                         <div class="hover_txt" data-video-url="video/TRAVEL.mp4">
@@ -544,6 +528,25 @@
                                         <img src="img/Frame 38.png" alt="" class="video">
                                         <div class="hover_txt" data-video-url="video/rhythemical_intro.mp4">
                                             <p>애니메이션 인트로 영상</p>
+                                            <i class="fa-solid fa-plus fa-beat"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tabs-4">
+                                <div class="photo_wrap">
+                                    <div class="tab_photo tab_video">
+                                        <video src="img/univ2.mov" loop muted autoplay alt=""></video>
+                                        <div class="hover_txt" data-img-url="">
+                                            <p>영화 세트 디자인</p>
+                                            <i class="fa-solid fa-plus fa-beat"></i>
+                                        </div>
+                                    </div>
+                                    <div class="tab_photo tab_video">
+                                        <video src="img/univ3.mp4" loop muted autoplay alt=""></video>
+                                        <div class="hover_txt" data-img-url="">
+                                            <p>포토샵 애니메이션</p>
                                             <i class="fa-solid fa-plus fa-beat"></i>
                                         </div>
                                     </div>

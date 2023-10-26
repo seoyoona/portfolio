@@ -27,8 +27,8 @@ header nav .header_wrap .sns_link ul li { margin-right: 2rem; font-size: 2rem; }
 /* main */
 main { width: 100%; height: 100%; } 
 main section { margin-top: 5rem; margin-bottom: 5rem; } 
-main .section{opacity: 0; transition:  all .5s ease;}
-main .section.show{opacity: 1;}
+/* main .section{opacity: 0; transition:  all .5s ease;}
+main .section.show{opacity: 1;} */
 
 main .about_me { height: 120rem;  } 
 main .about_me .intro_title { font-size: 5rem; text-align: center; position: relative; line-height: 150%; margin-bottom: 5rem; } 
@@ -92,7 +92,7 @@ main .experience .exp_wrap ul li .exp_content .txt { font-size: 1.4rem; font-wei
 
 main .project_wrap { display: flex; position: relative; width: 100%; height: 100vh; } 
 main .project_wrap .item { position: absolute; top: 0; height: 30vw; } 
-main .project_wrap .item.left { left: -0%; width: 60%; transition: left 1s ease-in-out; } 
+main .project_wrap .item.left { left: -0%; width: 60%; transition: all .5s ease-in-out; transform: translateX(-150%);} 
 main .project_wrap .item.right { width: 30%; right: 0; margin-top: 6%; } 
 .left .mockup img, .left .mockup .mask { position: absolute; top: 0; left: 0; } 
 main .project_wrap .mockup.pc { position: relative; width: 635px; height: 100%; margin-left: 100px; } 
@@ -133,7 +133,7 @@ main .photos { height:100rem; width: 100%; }
 .tab_photo>.menu{transform: scale(1.4) translateX(10%) translateY(5%);}
 .tab_photo>.jean{transform: translateX(-15%) ;}
 .tab_photo>.tag{transform: scale(1.2) translateX(-5%) ;}
-.tab_photo>.video{transform: translateX(-16.5%) translateY(6%);}
+.tab_photo>.video{transform: scale(2.1) translateX(-7.5%) translateY(18%);}
 
 .hover_txt{position: absolute; width: 28rem; height: 30rem; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.8rem; color: #fff; z-index: 999; text-align: center; justify-content: center; align-items: center; line-height: 200%; opacity: 0; transition: all .3 ease; cursor: pointer; padding-top: 40%;}
 .tab_video>.hover_txt{padding-top: 22%;}
