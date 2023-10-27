@@ -96,15 +96,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
             if (!entry.isIntersecting) {
                 return;
             }
-            // entry.target은 현재 보이는 .project_wrap 요소입니다.
-            // querySelector를 이용해 .item.left를 찾아서 스타일을 적용합니다.
+
             entry.target.querySelector('.item.left').style.transform = 'translateX(0)';
             observer.unobserve(entry.target);
         });
     });
 
-    // querySelectorAll을 이용해 모든 .project_wrap 요소를 선택하고,
-    // 각 요소에 대해 observer.observe를 호출합니다.
     document.querySelectorAll('.project_wrap').forEach(elem => {
         observer.observe(elem);
     });
@@ -175,7 +172,7 @@ function controlClass(old) {
 }
 
 // skill
-// chart();
+
 function chart() {
 	const chart = $('.adv_box');
 	chart.each(function () {
@@ -255,6 +252,8 @@ function pipScroll(params) {
 win.on('resize', function () {
 	pipScroll();
 });
+
+pipScroll();
 
 // modal_img
 $('.hover_txt').on('click', function() {
