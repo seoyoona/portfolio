@@ -130,7 +130,7 @@ main .photos { height:100rem; width: 100%; }
 .tab_video:hover .hover_txt{opacity: 1;}
 .tab_photo>img, .tab_photo>video { height: 100%; } 
 .tab_photo>.drawing{transform: translateX(-13%);}
-.tab_photo>.menu{transform: scale(1.4) translateX(10%) translateY(5%);}
+.tab_photo>.menu{transform: translateX(-5%);}
 .tab_photo>.jean{transform: translateX(-15%) ;}
 .tab_photo>.tag{transform: scale(1.2) translateX(-5%) ;}
 .tab_photo>.video{transform: scale(2.1) translateX(-7.5%) translateY(18%);}
