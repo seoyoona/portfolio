@@ -155,3 +155,5 @@ footer { height: 10rem; }
 footer .footer_wrap { display: flex; justify-content: space-around; margin-top: 4.5rem; font-size: 1.6rem; } 
 footer .sns_link>ul { display: flex; justify-content: right; } 
 footer .sns_link ul li { margin-right: 2rem; font-size: 2rem; } 
+
+.displaynone{display: none;}
