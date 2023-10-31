@@ -101,6 +101,9 @@ main .project_wrap .mockup.mobile{position: relative; width: 18%; height: 100%; 
 main .project_wrap .mockup.mobile .mask{ z-index: 8;width: 13.2rem;height: 280px;overflow: hidden;left: 7.7%;top: 2%; border-radius: 1.2rem;}
 main .project_wrap .mockup.tablet{position: relative; width: 45%; height: 100%; top: -150%; left: -15%; z-index: 15;}
 main .project_wrap .mockup.tablet .mask{  z-index: 8;width: 32.5rem;height: 240px;overflow: hidden;left: 8%; top: 2%; }
+main .project_wrap .team{display: flex;}
+main .project_wrap .team .mockup.mobile{top: 0; left: 10%; margin-right: 5rem;width: 30%; height: 100%;  z-index: 15; }
+main .project_wrap .team .mockup.mobile .mask{ z-index: 8;width: 22rem;height: 475px;overflow: hidden;left: 7.2%;top: 3%; border-radius: 1.2rem;}
 .screen, .device { width: 100%; } 
 .screen { z-index: 3; } 
 .device { z-index: 4; } 
@@ -109,6 +112,11 @@ main .project_wrap .item.right .tit{font-size: 2.2rem; font-weight: 500;}
 main .project_wrap .item.right .num{font-size: 2.8rem; font-weight: 700;}
 main .project_wrap .item.right .txt{font-size: 1.6rem; font-weight: 400; padding-top: 5rem;}
 main .project_wrap .item.right .txt p{padding: 1rem;}
+main .project_wrap .project_btn{display: flex;}
+main .project_wrap .project_btn>div{width: 300px; height: 50px; background: #fff; color: #333; text-align: center; line-height: 50px; border-radius: 3rem; margin-right: 1rem; margin-top: 3rem; border: 3px solid var(--primary); transition: all .3s ease; cursor: pointer;}
+main .project_wrap .project_btn>div>a{text-decoration: none;}
+main .project_wrap .project_btn>div:hover{background: var(--primary); }
+main .project_wrap .project_btn>div:hover a{color: #fff; }
 
 main .photos { height:100rem; width: 100%; } 
 .tab_wrap { margin-bottom: 10rem; width: 100%; } 
