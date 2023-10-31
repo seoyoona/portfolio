@@ -287,9 +287,15 @@ $('.hover_txt').on('click', function() {
 
     $('#modal').on('click', function() {
         $(this).css('display', 'none');
+		$('body').css('overflow', 'auto');
     });
 
 	$('.modal_close_btn').on('click',function(){
 		$('#modal').css('display','none')
+		$('body').css('overflow', 'auto');
 	})
+	function showModal() {
+		$('#modal').css('display', 'block');
+		$('body').css('overflow', 'hidden'); // 모달 창이 열릴 때 스크롤을 숨깁니다.
+	}
 // });
