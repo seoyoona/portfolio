@@ -54,8 +54,8 @@ main .about_me .intro_info .institut_name { color: #999; font-size: 1.6rem; }
 main .about_me .info_col_left.show{transform: translateX(0); opacity: 1;}
 main .about_me .info_col_right.show{transform: translateX(0); opacity: 1;}
 
-main h1 { font-size: 4rem; text-align: center; margin-bottom: 10rem; margin-top: 3rem; font-family: 'Amiri', serif; } 
-main h2 { font-size: 2.8rem; text-align: center; margin-bottom: 5rem; margin-top: 10rem; font-family: 'Amiri', serif; } 
+main h1 { font-size: 4rem; text-align: center; margin-bottom: 10rem; margin-top: 3rem; font-family: 'Noto Serif', serif; } 
+main h2 { font-size: 2.8rem; text-align: center; margin-bottom: 5rem; margin-top: 10rem; font-family: 'Noto Serif', serif; } 
 main .advantage ul { display: flex; justify-content: space-between; align-items: center; } 
 main .advantage .adv_box { background: #e9e8e8; width: 20rem; height: 28rem; border-radius: 15rem; } 
 main .advantage .adv_text { font-size: 1.8rem; margin-top: 2rem; text-align: center; } 
@@ -67,8 +67,8 @@ main .advantage .adv_box img { filter: grayscale(100%); transition: filter 0.3s 
 main .advantage .programming .adv_box img { height: 40%; margin-top: 30%; } 
 main .advantage .tools .adv_box img { height: 30%; margin-top: 40%; } 
 main .advantage .language .adv_box img { height: 35%; margin-top: 35%; } 
-main .advantage .percentage { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Amiri', serif; } 
-main .advantage .progress-bar-percentage--count { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Amiri', serif; } 
+main .advantage .percentage { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Noto Serif', serif; } 
+main .advantage .progress-bar-percentage--count { font-size: 3.4rem; margin-top: 3rem; text-align: center; font-family: 'Noto Serif', serif; } 
 main .advantage .adv_box:hover img { animation: bounce 1s; filter: grayscale(0%); } 
 
 @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 
@@ -84,7 +84,7 @@ main .advantage .adv_box:hover img { animation: bounce 1s; filter: grayscale(0%)
 
 main .experience .exp_wrap { display: flex; justify-content: space-around; font-size: 1.6rem; } 
 main .experience .exp_wrap >div>ul>li { display: flex; } 
-main .experience .exp_wrap ul li .date { padding-right: 3rem; font-family: 'Amiri',serif; font-size: 1.6rem; } 
+main .experience .exp_wrap ul li .date { padding-right: 3rem; font-family: 'Noto Serif',serif; font-size: 1.6rem; } 
 main .experience .exp_wrap ul li .exp_content { padding-bottom: 5rem; } 
 main .experience .exp_wrap ul li .exp_content div { padding-bottom: 2rem; } 
 main .experience .exp_wrap ul li .exp_content .tit { font-size: 1.8rem; font-weight: 500; } 
