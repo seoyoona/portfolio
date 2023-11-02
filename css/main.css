@@ -124,6 +124,7 @@ main .project_wrap .team .mockup.mobile>img{height: 698px;}
 main .project_wrap .team .mockup.mobile .mask{top: 100%; width: 35.5rem; height: 655px; border-radius: 30px;}
 iframe{display: block; position: absolute; width: 100% ;height: 680px; top: 0;}
 .opacity{opacity: 0;}
+.figma_usage{font-size: 3rem; position: absolute; top: -10%; opacity: .3; font-weight: 600;}
 
 main .photos { height:100rem; width: 100%; } 
 .tab_wrap { margin-bottom: 10rem; width: 100%; } 
