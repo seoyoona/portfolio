@@ -141,7 +141,7 @@ main .photos { height:135rem; width: 100%; }
 .tab_content { position: relative; min-height: 300px; } 
 .tab_content > div { position: absolute; top: 0; left: 0; display: none; background: #fff; background-size: 40px; padding: 1em; width: 100%; } 
 .tab_content > div.active { display: block; } 
-.photo_wrap { width: 100%; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;  } 
+.photo_wrap { width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 63px; } 
 .tab_photo { width: 30rem; height: 30rem; margin-top: 3rem; overflow: hidden; border-radius: 5rem; position: relative; transition: all .3s ease; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); } 
 .tab_photo::before { width: 30rem; height: 30rem; border-radius: 5rem; background: rgba(0,0,0,.5); position: absolute; top: 0; left: 0; content: ''; backdrop-filter: blur(8px); opacity: 0; transition: all .2s ease;  cursor: pointer; z-index: 99; } 
 .tab_photo:hover:before { opacity: 1; } 
