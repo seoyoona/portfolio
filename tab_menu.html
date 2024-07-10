@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialised;
+}
+
+.tab_wrap {margin: auto;}
+.tab_btn {padding-left: 0;}
+.tab_btn li {float: left;list-style: none;background: #ebebeb;margin-right: 10px;}
+.tab_btn:after { content: ''; display: block; clear: both;}
+.tab_btn li a { color: #999; text-transform: uppercase; font-weight: bold; line-height: 27px; text-decoration: none; display: block; padding: 0 20px;}
+.tab_btn li a.active {background: #000;color: #fff;}
+.tab_content {position: relative;min-height: 300px;}
+.tab_content > div { position: absolute; top: 0; left: 0; display: none; background: #e7b36e27 url(http://qwerew.cafe24.com/example/javascript/chicken.png) no-repeat 100px top; background-size: 40px; padding: 1em;}
+.tab_content > div.active {display: block;}
+.photo_wrap{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;}
+.tab_photo{width: 30rem; height: 30rem; background: #d9d9d9; margin-top: 3rem;}
+    </style>
+</head>
+<body>
+    <div class="tab_wrap">
+        <ul class="tab_btn">
+            <li><a href="#tabs-1" class="active">Work 1</a></li>
+            <li><a href="#tabs-2">Work 2</a></li>
+            <li><a href="#tabs-3">Work 3</a></li>
+        </ul>
+        <div class="tab_content">
+            <div id="tabs-1" class="active">
+                <h2>work1</h2>
+                <div class="photo_wrap">
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                </div>
+            </div>
+            <div id="tabs-2">
+                <h2>work2</h2>
+                <div class="photo_wrap">
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                </div>
+            </div>
+            <div id="tabs-3">
+                <h2>work3</h2>
+                <div class="photo_wrap">
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                    <div class="tab_photo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+const tabWrapper = document.querySelectorAll('.tab_wrap');
+function singleTab() {
+	const tabContent = document.querySelectorAll('.tab_content>div');
+	const targetLink = document.querySelectorAll('.tab_btn a');
+	for (let i = 0; i < targetLink.length; i++) {
+		targetLink[i].addEventListener('click', (e) => {
+			e.preventDefault();
+
+			for (let j = 0; j < targetLink.length; j++) {
+				targetLink[j].classList.remove('active');
+				e.target.classList.add('active');
+			}
+			let orgTarget = e.target.getAttribute('href');
+			console.log(orgTarget);
+			for (let x = 0; x < tabContent.length; x++) {
+				tabContent[x].style.display = 'none';
+			}
+			document.querySelector(orgTarget).style.display = 'block';
+		});
+		document.querySelector('#tabs-1').style.display = 'block';
+	}
+}
+
+for (const el of tabWrapper) {
+	const targetLink = el.querySelectorAll('ul.tab_btn a');
+	let tabContent = el.querySelectorAll('.tab_content > div');
+	targetLink.forEach(function (el) {
+		el.addEventListener('click', function (e) {
+			e.preventDefault();
+			let tg = this;
+			let currentLink = tg.getAttribute('href');
+			controlClass(targetLink);
+			controlClass(tabContent);
+			document.querySelector(currentLink).classList.add('active');
+			tg.classList.add('active');
+		});
+	});
+}
+
+function controlClass(old) {
+	let elements = Array.from(old);
+	elements.forEach(function (elem) {
+		elem.classList.remove('active');
+	});
+}
+</script>
+</html>

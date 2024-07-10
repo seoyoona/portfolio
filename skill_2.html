@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* skill*/
+.charts {
+	width: 80%;
+	margin: 3rem auto;
+	display: flex;
+	justify-content: center;
+}
+.charts .chart {
+	margin: 0 20px;
+	position: relative;
+}
+.charts .chart h2 {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+.charts .chart svg{
+	width: 220px;
+	height: 220px;
+}
+.charts .chart svg circle{
+	fill: url(#bg1);
+	stroke-width: 20 ;
+	stroke-dasharray: 628 ;
+	stroke-dashoffset: 628 ;
+	stroke-linecap: round ;
+	transform:rotate(-90deg);
+	transform-origin: 50% 50%;
+}
+.charts .chart:nth-child(1) svg circle,
+.charts .chart:nth-child(1) svg line{
+	stroke: #ffc114;
+}
+.charts .chart:nth-child(2) svg circle,
+.charts .chart:nth-child(2) svg line{
+	stroke: #ff4714;
+}
+.charts .chart:nth-child(3) svg circle,
+.charts .chart:nth-child(3) svg line{
+	stroke: #4714ff;
+}
+
+    </style>
+</head>
+<body>
+    <section class="section5">
+        <div class="charts">
+          <div class="chart">
+            <h2 data-num="20">0</h2>
+            <svg>
+              <circle cx="110" cy="110" r="100"></circle>
+            </svg>
+          </div>
+          <div class="chart">
+            <h2 data-num="80">0</h2>
+            <svg>
+              <circle cx="110" cy="110" r="100"></circle>
+            </svg>
+          </div>
+          <div class="chart">
+            <h2 data-num="60">0</h2>
+            <svg>
+              <circle cx="110" cy="110" r="100"></circle>
+            </svg>
+          </div>
+        </div>
+      </section>    
+      <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+      <script src='https://code.jquery.com/ui/1.13.2/jquery-ui.js'></script>    
+      <script>
+        function circleChart() {
+	let path = Math.floor(document.querySelector('circle').getTotalLength());
+	const chart = $('.chart');
+	chart.each(function () {
+		const item = $(this);
+		const title = item.find('h2');
+		const tgNum = title.attr('data-num');
+		const circle = item.find('circle');
+		$({ rate: 0 })
+			.stop()
+			.animate(
+				{ rate: tgNum },
+				{
+					duration: 1500,
+					progress: function () {
+						let now = this.rate;
+						let amount = path - (path * now) / 100;
+						title.text(Math.floor(now));
+						circle.css({ strokeDashoffset: amount });
+					},
+				}
+			);
+	});
+}
+
+      </script>
+</body>
+</html>
