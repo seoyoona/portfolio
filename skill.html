@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress-bar {
+    position: relative;
+    display: flex;
+    margin: 10px auto 20px;
+    width: 160px;
+    height: 160px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+.progress-bar-content-circle{
+    position: absolute;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    transform: translate3d(-50%, 0, 0);
+}
+.progress-bar-circle {
+  transform: rotate(-90deg) translate(-100%, 0);
+}
+.progress-bar-circle,
+.progress-bar-background{
+    animation: progress 1s;
+    fill: none; 
+    stroke: #ffdb00; 
+    stroke-width: 4px; 
+    stroke-linecap: round;
+    stroke-dasharray: 0; 
+    stroke-dashoffset: 0; 
+    position: relative;
+    z-index: 10;
+}
+.progress-bar-background{
+    stroke:#fff; 
+    stroke-width: 4 - 1;
+    z-index: 0;
+    fill: #fff;
+}
+.progress-bar-percentage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    width: 100%;
+    & > span {
+      line-height: 1.8;
+    }
+}
+.progress-bar-percentage--count {
+    display: block;
+    font-size: 30px;
+    color: #000;
+    line-height: 1.13;
+    font-weight: 500;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="progress-bar--animate-circle" data-progress="65">
+        <div class=" progress-bar-percentag progress-bar-percentage--count"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        (function ($){
+
+$.fn.bekeyProgressbar = function(options){
+
+    options = $.extend({
+      animate     : true,
+      animateText : true
+    }, options);
+
+    const $this = $(this);
+  
+    const $progressBar = $this;
+    const $progressCount = $progressBar.find('.progress-bar-percentage--count');
+    const $circle = $progressBar.find('.progress-bar-circle');
+    const percentageProgress = $progressBar.data('progress');
+    const percentageRemaining = (100 - percentageProgress);
+    const percentageText = percentageProgress;
+  
+    //Calcule la circonférence du cercle
+    const radius = $circle.attr('r');
+    const diameter = radius * 2;
+    const circumference = Math.round(Math.PI * diameter);
+
+    //Calcule le pourcentage d'avancement
+    const percentage =  circumference * percentageRemaining / 100;
+
+    $circle.css({
+      'stroke-dasharray' : circumference,
+      'stroke-dashoffset' : percentage
+    })
+    
+    //Animation de la barre de progression
+    if(options.animate === true){
+      $circle.css({
+        'stroke-dashoffset' : circumference
+      }).animate({
+        'stroke-dashoffset' : percentage
+      }, 3000 )
+    }
+    
+    //Animation du texte (pourcentage)
+    if(options.animateText == true){
+
+      $({ Counter: 0 }).animate(
+        { Counter: percentageText },
+        { duration: 3000,
+         step: function () {
+           $progressCount.text( Math.ceil(this.Counter));
+         }
+        });
+
+    }else{
+      $progressCount.text( percentageText);
+    }
+  
+};
+
+})(jQuery);
+
+
+
+            // 보장준비율 animate
+            $('.progress-bar--animate-circle').bekeyProgressbar();
+    </script>
+</body>
+</html>
