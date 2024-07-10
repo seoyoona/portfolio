@@ -1,5 +1,5 @@
 // text
-const string = '세상의 모든 색을 담는 컬러링북 퍼블리셔 서유나입니다';
+const string = 'I am Yoona,\nWeb Publisher & UX Researcher';
 const el = document.getElementById('str');
 
 function animate(str) {
@@ -16,6 +16,7 @@ function animate(str) {
 }
 
 animate(string.split(''));
+
 
 // gnb
 const win = $(window);
