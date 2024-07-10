@@ -21,7 +21,7 @@ header nav .gnb>ul>li:before { width: .5rem; height: .5rem; background: var(--pr
 header nav .gnb li:hover a { color: var(--primary); } 
 header nav .gnb li:hover::before { display: block; } 
 
-header nav .header_wrap .logo { width: 60%; justify-content: center; align-items: center; position: absolute; left: 20%; top: 1rem; } 
+header nav .header_wrap .logo {opacity: 0; width: 60%; justify-content: center; align-items: center; position: absolute; left: 20%; top: 1rem; } 
 header nav .header_wrap .logo .logo_img { height: 8rem; justify-content: center; align-items: center; text-align: center; } 
 header nav .header_wrap .logo .logo_img img { height: 8rem; } 
 header nav .header_wrap .logo .logo_title { margin-top: 1rem; text-align: center; line-height: 120%; font-size: 1.2rem; font-weight: 700; } 
