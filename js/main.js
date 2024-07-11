@@ -1,5 +1,5 @@
 // text
-const string = 'I am Yoona,\nWeb Publisher & UX Researcher';
+const string = 'I am Yoona,\nWeb Publisher & UX Designer';
 const el = document.getElementById('str');
 
 function animate(str) {
